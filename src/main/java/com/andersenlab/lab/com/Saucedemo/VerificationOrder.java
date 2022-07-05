@@ -1,0 +1,23 @@
+package com.andersenlab.lab.com.Saucedemo;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class VerificationOrder {
+
+    WebDriver driver;
+
+    @FindBy(xpath = "//*[@id='finish']")
+    WebElement finishButton;
+
+    public VerificationOrder(WebDriver driver){
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    public void finishButton(){
+        finishButton.click();
+    }
+}

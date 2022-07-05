@@ -3,8 +3,6 @@ package com.andersenlab.lab.com.demoqa;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -17,8 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class ClickButton {
 
     WebDriver driver;
-    Actions actions = new Actions(driver);
-    WebDriverWait wait = new WebDriverWait(driver, 5);
+    Actions actions;
 
     @FindBy(xpath = "//*[@id='doubleClickBtn']")
     WebElement doubleClickBtn;
@@ -41,6 +38,7 @@ public class ClickButton {
     public ClickButton(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
+        actions = new Actions(driver);
     }
 
     public void doubleClickBtn(){

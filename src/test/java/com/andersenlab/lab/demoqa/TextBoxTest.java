@@ -2,6 +2,7 @@ package com.andersenlab.lab.demoqa;
 
 import com.andersenlab.lab.com.demoqa.DemoqaComSetup;
 import com.andersenlab.lab.com.demoqa.TextBox;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
@@ -33,6 +34,11 @@ public class TextBoxTest {
         textBox.submitButton();
         textBox.checkEnter();
 
+    }
+
+    @AfterAll
+    public static void close(){
+        driver.close();
     }
 
 }

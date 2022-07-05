@@ -34,6 +34,7 @@ public class TextBox {
 
     public TextBox(WebDriver driver){
         this.driver=driver;
+        actions = new Actions(driver);
         PageFactory.initElements(driver, this);
     }
 
@@ -54,7 +55,6 @@ public class TextBox {
     }
 
     public void submitButton(){
-        actions = new Actions(driver);
         actions.moveToElement(submitButton).click();
     }
 

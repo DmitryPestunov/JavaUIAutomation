@@ -1,8 +1,10 @@
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.logging.Logger;
 import org.junit.platform.commons.logging.LoggerFactory;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@DisplayName("Triangle test")
 public class TriangleTest {
     private static Triangle t = new Triangle();
     private static Logger logger = LoggerFactory.getLogger(TriangleTest.class);

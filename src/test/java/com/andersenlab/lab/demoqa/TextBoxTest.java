@@ -4,12 +4,14 @@ import com.andersenlab.lab.com.demoqa.DemoqaComSetup;
 import com.andersenlab.lab.com.demoqa.TextBox;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
+@DisplayName("Text box")
 public class TextBoxTest {
 
     static WebDriver driver;
@@ -24,6 +26,7 @@ public class TextBoxTest {
         driver.get("https://demoqa.com/text-box");
     }
 
+    @DisplayName("Entering text in a field")
     @Test
     public void test1(){
         textBox = new TextBox(driver);

@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
+@DisplayName("Testing purchase")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class SaucedemoComTest {
 
@@ -28,6 +29,7 @@ public class SaucedemoComTest {
         driver.get("https://www.saucedemo.com/");
     }
 
+    @DisplayName("sign up")
     @Order(1)
     @Test
     public void signUpTest() {
@@ -37,6 +39,7 @@ public class SaucedemoComTest {
         signUpPage.loginButton();
     }
 
+    @DisplayName("select item")
     @Order(2)
     @Test
     public void selectItemTest(){
@@ -45,6 +48,7 @@ public class SaucedemoComTest {
         selectItem.clickButtonShoppingCart();
     }
 
+    @DisplayName("cart check")
     @Order(3)
     @Test
     public void cartTest(){
@@ -53,6 +57,7 @@ public class SaucedemoComTest {
         checkCart.checkoutButton();
     }
 
+    @DisplayName("entering personal info")
     @Order(4)
     @Test
     public void enterInformatonClientTest(){
@@ -63,6 +68,7 @@ public class SaucedemoComTest {
         enterInformatonClient.clickContinieButton();
     }
 
+    @DisplayName("verification order check")
     @Order(5)
     @Test
     public void verificationOrderTest(){
@@ -70,9 +76,10 @@ public class SaucedemoComTest {
         verificationOrder.finishButton();
     }
 
+    @DisplayName("complete page check")
     @Order(6)
     @Test
-    public void complitePageTest(){
+    public void completePageTest(){
         complitePage = new ComplitePage(driver);
         complitePage.searchCongratulationsText();
     }

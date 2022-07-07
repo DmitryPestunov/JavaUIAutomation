@@ -26,6 +26,7 @@ public class ClickButtonTest {
         driver.get("https://demoqa.com/buttons");
     }
 
+
     @Test
     public void testButtons(){
        clickButton = new ClickButton(driver);
